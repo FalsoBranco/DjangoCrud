@@ -1,0 +1,17 @@
+{% extends 'filme/base.html' %}
+
+{% block 'title' %}Delete{% endblock 'title' %}
+
+
+{% block "content" %}
+
+<div>
+    <form method="post" novalidate>
+        {% csrf_token %}
+
+        <p> tem certerza que deseja deletar? {{object}}</p>
+
+        <button type="submit">Deletar</button>
+    </form>
+</div>
+{% endblock "content" %}

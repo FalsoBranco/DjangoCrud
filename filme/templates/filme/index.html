@@ -21,6 +21,16 @@
             {{ filme.genero }}
             {{ filme.preco }}
             {{ filme.quantidade }}
+            <a href="{% url 'movie:edit' filme.pk %}">
+                <button type="button">
+                    Editar
+                </button>
+            </a>
+            <a href="{% url 'movie:delete' filme.pk %}">
+                <button type="button">
+                    Deletar
+                </button>
+            </a>
 
         </div>
         {% endfor %}
