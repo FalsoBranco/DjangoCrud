@@ -7,7 +7,7 @@
 
 <div class="container">
     <div>
-        <a href="{% url 'movie:post' %}">
+        <a href="{% url 'filme:post' %}">
             <span>Adicionar novo filme</span>
         </a>
     </div>
@@ -15,18 +15,18 @@
 
     <div>
 
-        {% for filme in filme_list %}
+        {% for filme in filmes %}
         <div class="filme">
             {{ filme.filme }}
             {{ filme.genero }}
             {{ filme.preco }}
             {{ filme.quantidade }}
-            <a href="{% url 'movie:edit' filme.pk %}">
+            <a href="{% url 'filme:edit' filme.pk %}">
                 <button type="button">
                     Editar
                 </button>
             </a>
-            <a href="{% url 'movie:delete' filme.pk %}">
+            <a href="{% url 'filme:delete' filme.pk %}">
                 <button type="button">
                     Deletar
                 </button>
