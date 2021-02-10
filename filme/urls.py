@@ -1,8 +1,8 @@
-from django.urls import include, path
+from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", views.FilmeListView.as_view(), name="index"),
     path("post/", views.movie_post, name="post"),
 ]
